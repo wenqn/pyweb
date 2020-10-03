@@ -5,7 +5,7 @@ import pandas as pd
 
 #从excel表格中读取单元格，去掉重复单元格内容
 def rmduplicate(xlsfile):
-    data = pd.read_excel(xlsfile)
+    data = pd.read_excel(xlsfile, header=None, index_col=None)
 
     newdata = []
     for i in data:
